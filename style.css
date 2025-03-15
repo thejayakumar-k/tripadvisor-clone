@@ -7,11 +7,6 @@ body {
   font-family: "Gabarito", sans-serif;
 }
 
-.full-page {
-  padding-left: 200px;
-  padding-right: 200px;
-}
-
 .navbar {
   display: flex;
   justify-content: space-around;
@@ -23,8 +18,7 @@ body {
   z-index: 1;
 }
 
-.navbar__s1 h1,
-img {
+.navbar__s1 h1,img {
   width: 40px;
   padding: 3px;
   display: flex;
@@ -38,6 +32,8 @@ img {
 .navbar__s2 p {
   padding: 20px;
 }
+
+
 
 .navbar__s3__INR {
   margin: 7px;
@@ -62,81 +58,112 @@ img {
   border-radius: 30px;
 }
 
-.title {
-  flex-wrap: wrap;
-  margin-top: 70px;
-  font-size: x-large;
+
+.title{
   text-align: center;
-  font-weight: bolder;
-  font-size: 50px;
+  margin-top: 50px;
+  margin-bottom: 60px;
+  font-size: 25px;
 }
 
-.menu__s1__items {
+.menu{
   display: flex;
-  margin-top: 40px;
   justify-content: center;
-  gap: 25px;
-  font-size: 18px;
+  gap: 30px;
+}
+
+/* search-bar */
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  background-color: white; 
 }
 
 .search {
   display: flex;
-  border: solid 1px black;
-  padding: 10px;
-  border-radius: 50px;
-  width: 60%;
-  margin-top: 50px;
-  margin-left: 220px;
   align-items: center;
-  text-align: center;
+  gap: 10px; 
+  background-color: white;
+  padding: 10px 15px;
+  border-radius: 40px;
+  border: solid 1px black;
 }
+
 
 .search input {
-  width: 100%;
-  font-size: medium;
-  margin-left: 10px;
   border: none;
-  background-color: transparent;
   outline: none;
+  padding: 8px;
+  width: 500px;
+  font-size: 16px;
 }
+
 
 .search button {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  background-color: #33e0a1;
+  padding: 8px 16px;
+  background-color: #00f61d;
+  color: black;
   border: none;
-  border-radius: 50px;
+  border-radius: 25px;
+  cursor: pointer;
 }
 
-.trip-image img {
-  flex-wrap: wrap;
-  width: 100%;
+.search button:hover {
+  background-color: #5fd56c;
+}
+
+
+
+
+
+
+
+
+
+
+.trip-image img{
+  width: 1050px;
   margin-top: 50px;
+}
+
+.full-page{
+  margin-left: 200px;
+  margin-right: 200px
 }
 
 .cards__title{
   margin-top: 20px;
 }
 
+/* cards */
+
+.cards{
+  flex-grow: 2;
+  flex-basis: 20%;
+  margin: 5px;
+}
+
 /* cards__row-1 */
+
+
 
 .cards__row1 {
   flex-wrap: wrap;
   display: flex;
-  gap: 10px;
+  gap: 5px;
   padding-top: 20px;
 }
 
 .cards__row1__s1 img {
-  width: 260px;
+  width: 250px;
   border: none;
   border-radius: 10px;
 }
 
 .cards__row1__s1 p {
-  
   bottom: 50px;
   position: relative;
   left: 10px;
@@ -148,6 +175,7 @@ img {
 /* cards__row-2 */
 
 .cards__row2 {
+
   flex-wrap: wrap;
   display: flex;
   gap: 10px;
@@ -155,7 +183,8 @@ img {
 }
 
 .cards__row2__s2 img {
-  width: 260px;
+
+  width: 250px;
   border: none;
   border-radius: 10px;
 }
@@ -205,3 +234,99 @@ img {
 }
 
 
+/* Media Queries */
+
+
+@media screen and (max-width: 768px) {
+  .full-page {
+    margin: 20px;
+  }
+
+  .search input {
+    width: 250px;
+  }
+
+  .cards__row1__s1 img,
+  .cards__row2__s2 img {
+    width: 100%;
+  }
+
+  .cards__row1,
+  .cards__row2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .trip-image img {
+    width: 100%;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 20px;
+  }
+
+  .footer__one p {
+    font-size: 14px;
+  }
+}
+
+
+/* Mobiles view */
+@media screen and (max-width: 480px) {
+  .title h1 {
+    font-size: 24px;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .search {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .search input {
+    width: 90%;
+  }
+
+  .search button {
+    width: 90%;
+  }
+
+  .cards__title h1,
+  .cards__tile h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .cards__title p,
+  .cards__tile p {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .cards__row1__s1 p {
+    font-size: large;
+  }
+
+  .end-image {
+    height: auto;
+    padding: 20px;
+  }
+
+  .end-image__one {
+    padding: 0 20px;
+    font-size: medium;
+  }
+
+  .end-image img {
+    width: 100%;
+    position: static;
+    margin-top: 20px;
+  }
+}
